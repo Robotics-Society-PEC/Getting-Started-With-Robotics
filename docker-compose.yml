@@ -1,0 +1,8 @@
+services:
+  robotics-env:
+    build: .
+    volumes:
+      - ./workspace:/home/myuser/workspace
+    stdin_open: true # Equivalent to `-i` in `docker run`
+    tty: true # Equivalent to `-t` in `docker run`
+    command: /bin/bash
