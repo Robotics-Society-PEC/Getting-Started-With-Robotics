@@ -252,31 +252,87 @@ services:
 - `command: /bin/bash`: Ensures that when the container starts, it opens a bash shell, allowing you to interact with the container.
 
 ### 2. Run Docker Compose
+
 To start the container in interactive mode, simply use:
+
 ```bash
 docker-compose up
 ```
+
 This command will start your container as specified in the `docker-compose.yml` file, attaching the terminal to it, so you can interact with the shell inside the container.
 
 ### 3. Accessing the Container
+
 Once the container is running, you should automatically be placed inside the container's bash shell, where you can run commands interactively.
 
 #### Running in Detached Mode
+
 If you later want to run the container in detached mode (not interactively), you can add the `-d` flag to the `docker-compose up` command:
+
 ```bash
 docker-compose up -d
 ```
+
 This runs the container in the background, freeing up your terminal for other tasks.
 
 ### 4. Creating a File inside the Container
+
 Let's test this by creating a file inside the container and ensuring it's visible on your local machine.
+
 1. **Inside the Docker Contianer:**
-    ```bash
-    touch /home/myuser/workspace/newfile.txt
-    ```
+   ```bash
+   touch /home/myuser/workspace/newfile.txt
+   ```
 2. **On your local machine:** Check your `./workspace` directory, and you should see `newfile.txt` there.
 
 This synchronization ensures that all your work inside the Docker environment is consistent with your local development setup, making it easier to manage code and collaborate.
+
+# Compiling and Executing C Code
+
+To work with C programs in a Linux environment, you'll need to know how to compile and run your code using the command line. Here's how you can do it:
+
+### 1. Compiling the C Program
+
+To compile the C program, you can use the gcc compiler, which is widely used in Linux environments. The general syntax for compiling a C program is:
+
+```bash
+gcc -o output_name source_file.c
+```
+
+For our example, compile the main.c file like this:
+
+```bash
+gcc -o hello hello.c
+```
+
+- `gcc`: The GNU C Compiler.
+- `-o hello`: This specifies the output file name. In this case, the compiled program will be named `hello`.
+- `hello.c`: The source file you want to compile.
+
+### 2. Executing the Compiled Program
+
+Once your program is compiled successfully, you can run it using the following command:
+
+```bash
+./hello
+```
+
+This will execute the `hello` program and output:
+
+```bash
+Hello, World!
+```
+
+# Examples
+
+1. [Hello, World!](workspace/1.Hello_World/README.md)
+2. [Variables and Data Type](workspace/2.Variables/README.md)
+3. [If Else Statements](workspace/3.Control_Structures/1.if_else/README.md)
+4. [While Loop](workspace/3.Control_Structures/2.while_loop/README.md)
+5. [For Loop](workspace/3.Control_Structures/3.for_loop/README.md)
+6. [Functions](workspace/4.Functions/README.md)
+7. [Arrays](workspace/5.Arrays/README.md)
+8. [Structures](workspace/6.Structures/README.md)
 
 # 📝 License
 
