@@ -5,4 +5,5 @@ services:
       - ./workspace:/home/myuser/workspace
     stdin_open: true # Equivalent to `-i` in `docker run`
     tty: true # Equivalent to `-t` in `docker run`
+    hostname: myuser
     command: /bin/bash
