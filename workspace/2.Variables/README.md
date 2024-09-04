@@ -22,13 +22,9 @@ This repository contains a simple C program that demonstrates the use of basic d
 6. `short`
    it can have values between -32768 and 32767 i.e. **2 bytes**
 
-<br>
 Adding `unsigned` infront of any data type can increase its range. Unsigned specifies the computer that the variable is positive only hence all the negative number space can be utilized for a more digits.
-<br />
 For eg:
-<br />
 `short` has a range from -32768 to 32767. **BUT**
-<br />
 `unsigned short` has a range from 0 to 65,535
 
 `unsigned` can be added to any data type to increase its size;
@@ -38,7 +34,6 @@ For eg:
 `consts` are data types which cannot be changed unline variables. Where varaibles can be redefined to change there values consts cannot
 
 `const int age = 18;`
-<br />
 Now the variable age cannot be changed into another variable.
 
 ## Code Explanation
